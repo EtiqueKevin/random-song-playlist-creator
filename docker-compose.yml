@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: spotify-backend
+    ports:
+      - "3000:8888"
+    environment:
+      SPOTIFY_CLIENT_ID: "${SPOTIFY_CLIENT_ID}"
+      SPOTIFY_CLIENT_SECRET: "${SPOTIFY_CLIENT_SECRET}"
+      REDIRECT_URI: "${REDIRECT_URI}"
+
+  frontend:
+    image: httpd:alpine
+    container_name: spotify-frontend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./frontend:/usr/local/apache2/htdocs/:ro

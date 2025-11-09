@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Random Playlist</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #1DB954;
+    }
+
+    button {
+      background-color: #1DB954;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1ed760;
+    }
+
+    pre {
+      background: #222;
+      color: #ddd;
+      text-align: left;
+      padding: 20px;
+      border-radius: 10px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-width: 700px;
+      margin: 30px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎵 Spotify Random Playlist Generator</h1>
+  <p>Connecte-toi avec ton compte Spotify pour créer une playlist aléatoire.</p>
+
+  <button id="loginBtn">Se connecter à Spotify</button>
+  <button id="generateBtn">Créer une playlist aléatoire</button>
+
+  <pre id="output">Non connecté.</pre>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
